@@ -21,12 +21,6 @@ namespace Cinemaniac.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            _logger.LogInformation("Hello privacy!!!!!!!");
-            return View();
-        }
-
         public IActionResult About()
         {
             _logger.LogInformation("Hello About!!!!!!!");
