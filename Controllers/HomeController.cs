@@ -21,9 +21,9 @@ namespace Cinemaniac.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult MovieNight()
         {
-            _logger.LogInformation("Hello About!!!!!!!");
+            _logger.LogInformation("MOVIE NIGHT!!!!!!!!");
             return View();
         }
 
