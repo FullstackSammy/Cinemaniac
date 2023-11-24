@@ -25,12 +25,12 @@
                                          src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
                                     <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                     <div class="image-flash">
-                                        <p class="author text-white">Author: @Html.DisplayNameFor(model => model.Author)</p>
+                                        <p class="author text-white">Author: @Html.DisplayNameFor(modelItem => item.Author)</p>
                                     </div>
                                 </div>
-                                <a asp-action="Details">
-                                    <h2 class="card-title text-white">@Html.DisplayNameFor(model => model.Title)</h2>
-                                    <p class="text-white">@Html.DisplayNameFor(model => model.Excerpt)</p>
+                                <a asp-action="Details" asp-route-id="@item.Id">
+                                    <h2 class="card-title text-white">@Html.DisplayNameFor(modelItem => item.Title)</h2>
+                                    <p class="text-white">@Html.DisplayNameFor(modelItem => item.Excerpt)</p>
                                 </a>
                                 <hr />
                                 <p class="card-text h6"></p>
