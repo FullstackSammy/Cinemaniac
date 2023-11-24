@@ -4,74 +4,45 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<div class="text-center">
+    <h2 class="title gradient-text">Your Film Review Blog</h2>
+</div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Slug)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Author)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UpdatedOn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Content)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Image)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Excerpt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreatedOn)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Slug)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Author)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UpdatedOn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Content)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Image)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Excerpt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedOn)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- Reviews previews  -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-4">
+                        <div class="card mb-4 background-gradient">
+                            <div class="card-body background-gradient">
+                                <div class="image-container background-gradient">
+                                    <img class="card-img-top"
+                                         src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                                    <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                                    <div class="image-flash">
+                                        <p class="author text-white">Author: @Html.DisplayNameFor(model => model.Author)</p>
+                                    </div>
+                                </div>
+                                <a asp-action="Details">
+                                    <h2 class="card-title text-white">@Html.DisplayNameFor(model => model.Title)</h2>
+                                    <p class="text-white">@Html.DisplayNameFor(model => model.Excerpt)</p>
+                                </a>
+                                <hr />
+                                <p class="card-text h6"></p>
+                                <p class="card-text h6">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    </div>
+</div>

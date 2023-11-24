@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -11,7 +12,7 @@ namespace Cinemaniac.Data.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
+            _ = migrationBuilder.CreateTable(
                 name: "Post",
                 columns: table => new
                 {

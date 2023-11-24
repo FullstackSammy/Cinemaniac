@@ -10,7 +10,7 @@ namespace Cinemaniac.Models
         public string Author { get; set; }
         public DateTime UpdatedOn { get; set; } = DateTime.Now;
         public string Content { get; set; }
-        public Image Image { get; set; }
+        public string Image { get; set; }
         public string Excerpt { get; set; }
         public DateTime CreatedOn { get; set; }
 
