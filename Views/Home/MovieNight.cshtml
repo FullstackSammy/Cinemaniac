@@ -3,7 +3,29 @@
     ViewData["Title"] = "MovieNight";
 }
 
-<div class="text-center">
-    <h1 class="display-4 gradient-text">Movie Night</h1>
+<!-- Titel for page -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mt-3 offset-md-2 text-white" style="filter: brightness(200%);">
+      <h3 class="login-reg-text gradient-text">Movie Night</h3>
+      <p class="login-reg-text">Wanna watch some good movies? Then please fill out the form below and we'll send you our top suggestions!</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 mt-3 offset-md-2 background-gradient" style="padding: 10px;">
+      <!-- will only show if user is logged in -->
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Email address</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+          <button id="contact-btn" class="btn btn-signup right background-gradient" type="submit" style="margin-top: 10px; border: 1px solid #2b1d2c">Submit</button>
+          <button class="btn btn-signup right background-gradient" style="margin-top: 10px; border: 1px solid #2b1d2c"><a href="{% url 'home' %}" class="edit-btn">Go back</a></button>
+        </div>
+      </form>
+      <!-- will only show if user is not logged in -->
+      <h4 style="text-align: center;"><a class="link" href="{% url 'account_login' %}">Sign in</a> or <a class="link"
+          href="{% url 'account_signup' %}">Register</a> to sign up for Movie Night!</h4>
+    </div>
+  </div>
 </div>
 

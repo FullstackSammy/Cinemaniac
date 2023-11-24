@@ -19,22 +19,56 @@
 /* Elements */
 
 html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+button, #profile, #email, #change-password, #two-factor, #personal-data, #enable-authenticator, #delete {
+    margin: 5px 0 10px 0;
+    background-image: linear-gradient(-90deg, #d38312, #a83279) !important;
+    color: white !important;
+    text-decoration: none;
+    border: none !important;
+}
+
+button:hover, button:active, input:active {
+    filter: brightness(200%);
+    border-color: whitesmoke;
+}
+
+input {
+    background-color: #2b1d2c !important;
+    color: whitesmoke !important;
+}
+
+#Input_RememberMe {
+    border-color: darkorange;
+    
+}
+
+h1, h2, h3 {
+    background: -webkit-linear-gradient(-60deg, #a83279, #d38312);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h1 {
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+h4, h3 {
+    margin-top: 5px;
 }
 
 body {
@@ -71,10 +105,12 @@ body {
 
 
 .fa {
-    color: rgb(255, 255, 255)
+    color: black !important;
 }
 
-footer {
-    margin: 10px;
+/* Media Queries */
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
 }
-
