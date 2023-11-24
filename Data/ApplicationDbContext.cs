@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Cinemaniac.Models;
 
 namespace Cinemaniac.Data
 {
@@ -9,5 +10,6 @@ namespace Cinemaniac.Data
             : base(options)
         {
         }
+        public DbSet<Cinemaniac.Models.Post> Post { get; set; } = default!;
     }
 }
