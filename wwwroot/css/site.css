@@ -104,14 +104,17 @@ body {
     filter: brightness(150%);
 }
 
-.nav-item:hover, #card-title:hover {
+.nav-item:hover, a:hover, #card-title:hover {
     filter: brightness(250%) !important;
 }
 
 #card-title {
-    color: whitesmoke !important;
+    color: whitesmoke;
 }
 
+#card-title:hover {
+    color: #2b1d2c !important;
+}
 
 .fa, fa:hover {
     color: black !important;
