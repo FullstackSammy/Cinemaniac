@@ -24,6 +24,11 @@
 
 /* Elements */
 
+a {
+    text-decoration: none !important;
+    color: whitesmoke !important;
+}
+
 html {
     font-size: 14px;
     position: relative;
@@ -62,23 +67,12 @@ input {
     
 }
 
-h1, h2, h3 {
-    background: -webkit-linear-gradient(-60deg, #a83279, #d38312);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 h1 {
     letter-spacing: 2px;
     margin-bottom: 0;
 }
 
-h2 {
-    font-weight: normal;
-}
-
-h4, h3 {
+h4 {
     margin-top: 5px;
 }
 
@@ -110,8 +104,12 @@ body {
     filter: brightness(150%);
 }
 
-.nav-item:hover {
+.nav-item:hover, #card-title:hover {
     filter: brightness(250%) !important;
+}
+
+#card-title {
+    color: whitesmoke !important;
 }
 
 

@@ -23,15 +23,14 @@
                                 <div class="image-container background-gradient">
                                     <img class="card-img-top"
                                          src="https://i.imgur.com/guuktFC.jpg" height="250" />
-                                    <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                     <div class="image-flash">
                                         <p class="author text-white">Author: @Html.DisplayTextFor(modelItem => item.Author)</p>
                                     </div>
                                 </div>
-                                <a asp-action="Details" asp-route-id="@item.Id">
-                                    <h2 class="card-title text-black">@Html.DisplayTextFor(modelItem => item.Title)</h2>
-                                    <p class="text-white">@Html.DisplayTextFor(modelItem => item.Excerpt)</p>
+                                <a class="card-title" asp-action="Details" asp-route-id="@item.Id">
+                                    <h2 id="card-title">@Html.DisplayTextFor(modelItem => item.Title)</h2>
                                 </a>
+                                <p class="text-white">@Html.DisplayTextFor(modelItem => item.Excerpt)</p>
                                 <hr />
                                 <p class="card-text h6"></p>
                                 <p class="card-text h6">
