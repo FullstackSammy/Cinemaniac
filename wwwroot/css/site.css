@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Gudea:ital@1&display=swap');
 
+/* hidden attribute*/
+.hide {
+    display: none;
+}
+
+
 /* Gradient text and background */
 .gradient-text {
     background: -webkit-linear-gradient(-60deg, #a83279, #d38312);
@@ -8,7 +14,7 @@
     -webkit-text-fill-color: transparent;
 }
 
-.background-gradient {
+.background-gradient, #logout-submit {
     background-image: linear-gradient(-90deg, #d38312, #a83279);
     color: white;
     border-radius: 3px;
@@ -28,7 +34,13 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-button, #profile, #email, #change-password, #two-factor, #personal-data, #enable-authenticator, #delete {
+.edit-btn {
+    background-image: linear-gradient(-90deg, #d38312, #a83279) !important;
+    color: white !important;
+    text-decoration: none;
+}
+
+#login-submit, #profile, #email, #change-password, #two-factor, #personal-data, #enable-authenticator, #delete, #update-profile-button, #change-email-button, #email-verification, .btn{
     margin: 5px 0 10px 0;
     background-image: linear-gradient(-90deg, #d38312, #a83279) !important;
     color: white !important;
@@ -36,9 +48,8 @@ button, #profile, #email, #change-password, #two-factor, #personal-data, #enable
     border: none !important;
 }
 
-button:hover, button:active, input:active {
-    filter: brightness(200%);
-    border-color: whitesmoke;
+button:hover, button:active, input:active, .btn:hover {
+    filter: brightness(160%);
 }
 
 input {
@@ -104,7 +115,7 @@ body {
 }
 
 
-.fa {
+.fa, fa:hover {
     color: black !important;
 }
 

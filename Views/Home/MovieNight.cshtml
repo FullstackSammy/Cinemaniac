@@ -19,12 +19,9 @@
           <label for="exampleFormControlInput1">Email address</label>
           <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
           <button id="contact-btn" class="btn btn-signup right background-gradient" type="submit" style="margin-top: 10px; border: 1px solid #2b1d2c">Submit</button>
-          <button class="btn btn-signup right background-gradient" style="margin-top: 10px; border: 1px solid #2b1d2c"><a href="{% url 'home' %}" class="edit-btn">Go back</a></button>
+                    <button class="btn btn-signup right background-gradient" style="margin-top: 10px; border: 1px solid #2b1d2c"><a class="edit-btn" asp-area="" asp-controller="Home" asp-action="Index">Go back</a></button>
         </div>
       </form>
-      <!-- will only show if user is not logged in -->
-      <h4 style="text-align: center;"><a class="link" href="{% url 'account_login' %}">Sign in</a> or <a class="link"
-          href="{% url 'account_signup' %}">Register</a> to sign up for Movie Night!</h4>
     </div>
   </div>
 </div>
