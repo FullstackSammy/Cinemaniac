@@ -13,12 +13,12 @@
         @if (SignInManager.IsSignedIn(User))
         {
             <h1 class="title gradient-text">Welcome Back!</h1>
-            <button class="btn btn-primary" style="font-size: 24px; margin-top: 50px;"><a asp-area="" asp-controller="Posts" asp-action="Index">G</a></button>
+            <button class="btn btn-primary" style="font-size: 24px; margin-top: 50px;"><a asp-area="" asp-controller="Posts" asp-action="Index">Go To Reviews</a></button>
         }
         else
         {
             <h1 class="title gradient-text">Welcome To Your Film Review Blog</h1>
-            <p style="letter-spacing: 2px; margin-top: 10px; font-size: 15px;">Do you already have an account? then feel free to <a class="gradient-text" asp-area="Identity" asp-page="/Account/Login">Login</a>! If you do not have one, we would it if you wanted to <a class="gradient-text" asp-area="Identity" asp-page="/Account/Register">Register</a></p>
+            <p style="letter-spacing: 2px; margin-top: 10px; font-size: 15px;">Do you already have an account? then feel free to <a class="gradient-text" asp-area="Identity" asp-page="/Account/Login">Login</a>! If you do not have one, we would love it if you wanted to <a class="gradient-text" asp-area="Identity" asp-page="/Account/Register">Register</a></p>
             <button class="btn btn-primary" style="font-size: 24px; margin-top: 50px;"><a asp-area="" asp-controller="Posts" asp-action="Index">Read Our Reviews</a></button>
         }
     </div>

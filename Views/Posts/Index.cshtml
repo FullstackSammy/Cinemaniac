@@ -5,7 +5,7 @@
 }
 
 <div class="text-center">
-    <h2 class="title gradient-text">Your Film Review Blog</h2>
+    <h2 class="gradient-text">Your Film Review Blog</h2>
 </div>
 
 
@@ -24,13 +24,13 @@
                                     <img class="card-img-top"
                                          src="https://i.imgur.com/guuktFC.jpg" height="250" />
                                     <div class="image-flash">
-                                        <p class="author text-white">Author: @Html.DisplayTextFor(modelItem => item.Author)</p>
+                                        <p class="author text-white">Author: @Html.DisplayTextFor(model => item.Author)</p>
                                     </div>
                                 </div>
                                 <a class="card-title" asp-action="Details" asp-route-id="@item.Id">
-                                    <h2 id="card-title">@Html.DisplayTextFor(modelItem => item.Title)</h2>
+                                    <h2 id="card-title">@Html.DisplayTextFor(model => item.Title)</h2>
                                 </a>
-                                <p class="text-white">@Html.DisplayTextFor(modelItem => item.Excerpt)</p>
+                                <p class="text-white">@Html.DisplayTextFor(model => item.Excerpt)</p>
                                 <hr />
                                 <p class="card-text h6"></p>
                                 <p class="card-text h6">
