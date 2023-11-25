@@ -10,14 +10,9 @@ using Cinemaniac.Models;
 
 namespace Cinemaniac.Controllers
 {
-    public class PostsController : Controller
+    public class PostsController(ApplicationDbContext context) : Controller
     {
-        private readonly ApplicationDbContext _context;
-
-        public PostsController(ApplicationDbContext context)
-        {
-            _context = context;
-        }
+        private readonly ApplicationDbContext _context = context;
 
         // GET: Posts
         public async Task<IActionResult> Index()
